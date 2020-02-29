@@ -1,9 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return <h1>Hello from Tech Store</h1>;
+import { Route, Switch } from "react-router-dom";
+
+// Components
+import Home from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import Product from "./pages/Product";
+import SingleProduct from "./pages/SingleProduct";
+import ContactPage from "./pages/ContactPage";
+import Cart from "./pages/CartPage";
+import Default from "./pages/Default";
+
+class App extends Component {
+  render() {
+    return (
+      <>
+        {/* navbar, sidebar, cart, footer  */}
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/products" exact component={Product} />
+          <Route path="/products/:id" component={SingleProduct} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/contact" exact component={ContactPage} />
+          <Route component={Default} />
+        </Switch>
+      </>
+    );
+  }
 }
 
 export default App;
