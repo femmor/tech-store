@@ -5,6 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router-dom";
 
 // Components
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import SideCart from "./components/SideCart";
+
+// Components
 import Home from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import Product from "./pages/Product";
@@ -18,6 +24,9 @@ class App extends Component {
     return (
       <>
         {/* navbar, sidebar, cart, footer  */}
+        <Navbar />
+        <Sidebar />
+        <SideCart />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={AboutPage} />
@@ -27,6 +36,7 @@ class App extends Component {
           <Route path="/contact" exact component={ContactPage} />
           <Route component={Default} />
         </Switch>
+        <Footer />
       </>
     );
   }
