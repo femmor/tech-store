@@ -33,7 +33,7 @@ class App extends Component {
           <Route path="/products" exact component={Product} />
           <Route path="/products/:id" component={SingleProduct} />
           <Route path="/cart" component={Cart} />
-          <Route path="/contact" exact component={ContactPage} />
+          <Route path="/contact" component={ContactPage} />
           <Route component={Default} />
         </Switch>
         <Footer />
