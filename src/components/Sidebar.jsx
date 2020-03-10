@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ProductConsumer } from "../context/context";
+import { ProductConsumer } from "../context";
 
 const Sidebar = () => {
   return (
